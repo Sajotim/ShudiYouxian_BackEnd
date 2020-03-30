@@ -138,11 +138,9 @@ export default {
       })
     },
     getVIPPayData(vipLevel) {
-      // 前往开通会员
       // this.drawer_vip = false
       // this.$router.push({ path: '/user/pluginInfo/list', query: {type: 2} })
       getVIPPayData(this.centerUserBase.id, vipLevel).then(res => {
-        // 弹框点击确定调整支付宝付款
         this.alipayPostData = res.data
         this.drawer_vip1_buy = true
       })
